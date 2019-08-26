@@ -5,9 +5,9 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class Circle : MonoBehaviour {
 
-    public float thetaScale = 0.01f;
-    public float radius = 3f;
-    public float lineWidth = 0.1f;
+    public float thetaScale = 0f;
+    public float radius = 0f;
+    public float lineWidth = 0f;
 
     public float depth = 0f;
 
