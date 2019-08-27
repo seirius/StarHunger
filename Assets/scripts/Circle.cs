@@ -11,6 +11,9 @@ public class Circle : MonoBehaviour {
 
     public float depth = 0f;
 
+    public Material material;
+
+    public Color color = Color.yellow;
 
     private int size;
     private LineRenderer lineRenderer;
@@ -26,6 +29,11 @@ public class Circle : MonoBehaviour {
         lineRenderer.startWidth = lineWidth;
         lineRenderer.endWidth = lineWidth;
         lineRenderer.positionCount = size;
+        if (material != null) {
+            lineRenderer.materials = new Material[1] {material};
+            lineRenderer.startColor = color;
+            lineRenderer.endColor = color;
+        }
     }
 
     void Update() {

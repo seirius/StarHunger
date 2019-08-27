@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Test : MonoBehaviour {
 
+    public GameObject canvas;
+
+    private PauseController pauseController;
+
     private Rigidbody2D rb2D;
 
     private Stats stats;
@@ -17,6 +21,7 @@ public class Test : MonoBehaviour {
     void Start() {
         rb2D = GetComponent<Rigidbody2D>();
         stats = GetComponent<Stats>();
+        pauseController = canvas.GetComponent<PauseController>();
     }
 
     void Update() {
@@ -53,6 +58,10 @@ public class Test : MonoBehaviour {
         } else {
             stats.currentVelocity += inputVelocity;
         }
+    }
+
+    void OnDestroy() {
+        pauseController.gameOver();
     }
 
     void calculateVelocity() {

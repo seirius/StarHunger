@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Default
   - Background
+  - Menu
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - Background
-  - 
+  - Menu
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Menu
+    uniqueID: 3335911517
     locked: 0
